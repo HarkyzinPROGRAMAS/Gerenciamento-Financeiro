@@ -769,7 +769,6 @@ var _autoDefault = parcelHelpers.interopDefault(_auto);
         }
     });
 })();
-console.log((0, _autoDefault.default));
 
 },{"chart.js/auto":"a3bOj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"a3bOj":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

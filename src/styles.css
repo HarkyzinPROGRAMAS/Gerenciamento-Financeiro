@@ -141,12 +141,13 @@ a {
 
 .listaContainer{
     color: white;
-    display:flex;
+    display: flex;
+    flex-direction: column;
     background-color: #203a43;
     margin: 20px;
     padding: 20px;
     border-radius: 20px;
-    gap: 3em;
+    gap: .5em;
     width: 70%;
     font-size: 20px;
 }
@@ -170,12 +171,22 @@ a {
     margin: 5px;
     padding: 20px;
     border-radius: 20px;
-    border: none;
+    border: none;   
     font-size: 17px;
     width: 20%;
-    align-self: center;
+    align-self: center;  
+}
 
-    
+.containerReceita button:hover {
+    cursor: pointer;
+}
+
+.containerReceita button:active {
+    background-color: rgba(255, 255, 255, 0.767);
+}
+
+.listaReceita li {
+    list-style-type: none;
 }
 
 

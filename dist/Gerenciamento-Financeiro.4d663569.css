@@ -119,4 +119,65 @@ a {
 .saldoAtual h3 {
   font-size: .8em;
 }
+
+.containerReceita {
+  color: #fff;
+  background-color: #203a43;
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 1em;
+  width: 70%;
+  margin: 20px;
+  padding: 20px;
+  font-size: 30px;
+  display: flex;
+}
+
+.listaContainer {
+  color: #fff;
+  background-color: #203a43;
+  border-radius: 20px;
+  flex-direction: column;
+  gap: .5em;
+  width: 70%;
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+}
+
+.containerReceita input, .containerReceita select {
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  gap: 5px;
+  margin: 10px;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.containerReceita button {
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  align-self: center;
+  width: 20%;
+  margin: 5px;
+  padding: 20px;
+  font-size: 17px;
+}
+
+.containerReceita button:hover {
+  cursor: pointer;
+}
+
+.containerReceita button:active {
+  background-color: #ffffffc4;
+}
+
+.listaReceita li {
+  list-style-type: none;
+}
 /*# sourceMappingURL=Gerenciamento-Financeiro.4d663569.css.map */
