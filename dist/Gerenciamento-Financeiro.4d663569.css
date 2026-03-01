@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #161313;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.titulo {
+  text-align: center;
+  color: #fff;
+  background-color: #2c5364;
+  padding: 10px 30px;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.botoesSUB {
+  border-radius: 1.25rem;
+  gap: 50px;
+  margin: 25px;
+  display: flex;
+}
+
+.botoesSUB a {
+  color: #fff;
+  border: none;
+  border-radius: 200px;
+  margin: .3125rem;
+  font-size: 1.2em;
+  transition: all .2s ease-out;
+}
+
+.botoesSUB a:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+.relatorios {
+  text-align: center;
+  display: flex;
+}
+
+.botoesRE {
+  background-color: gray;
+  border-radius: 1.25rem;
+  margin: 25px;
+  display: flex;
+}
+
+.botoesRE button {
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+.voltar {
+  text-align: center;
+  display: flex;
+}
+
+.botaoVoltar {
+  background-color: #2c5364;
+  border-radius: 1.25rem;
+  margin: 25px;
+  display: flex;
+}
+
+.botaoVoltar a {
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 1.1rem;
+  transition: all .2s ease-out;
+}
+
+.botaoVoltar a:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+}
+
+.saldo {
+  color: #fff;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  border: 2px solid #fff;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  width: 60%;
+  margin: 4em auto;
+  padding: 2em;
+  display: flex;
+}
+
+.saldoAtual {
+  font-size: clamp(2.2em, 2.5vw, 2.5em);
+}
+
+.saldoAtual h3 {
+  font-size: .8em;
+}
+/*# sourceMappingURL=Gerenciamento-Financeiro.4d663569.css.map */

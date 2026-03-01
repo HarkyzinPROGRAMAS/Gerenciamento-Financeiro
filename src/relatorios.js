@@ -22,6 +22,18 @@ import Chart from 'chart.js/auto'
             data: data.map(row => row.count)
           }
         ]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              color: 'white',
+              font: {
+                size: 14
+              }
+            }
+          }
+        }
       }
     }
   );
