@@ -125,4 +125,57 @@ a {
     font-size: 0.8em;
 }
 
+.containerReceita{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    background-color: #203a43;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 1em;
+    width: 70%;
+    font-size: 30px;
+    
+}
+
+.listaContainer{
+    color: white;
+    display:flex;
+    background-color: #203a43;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 3em;
+    width: 70%;
+    font-size: 20px;
+}
+
+.containerReceita input,
+.containerReceita select{
+    background-color: white;
+    color: black;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    gap: 5px;
+    font-size: 15px;
+
+}
+
+.containerReceita button{
+    background-color: white;
+    color: black;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 17px;
+    width: 20%;
+    align-self: center;
+
+    
+}
+
 

@@ -754,6 +754,18 @@ var _autoDefault = parcelHelpers.interopDefault(_auto);
                     data: data.map((row)=>row.count)
                 }
             ]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white',
+                        font: {
+                            size: 14
+                        }
+                    }
+                }
+            }
         }
     });
 })();
