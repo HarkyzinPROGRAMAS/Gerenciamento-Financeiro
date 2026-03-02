@@ -1,7 +1,7 @@
 # Gerenciamento-Financeiro
 
 ## Grupo:
-.Eriosvaldo Henrique Oliveira Roseno
-.Guilherme Almeida de Lima
-.José Renan Morais Cavalcanti
+.Eriosvaldo Henrique Oliveira Roseno <br>
+.Guilherme Almeida de Lima<br>
+.José Renan Morais Cavalcanti<br>
 .Thierry Almeida Braga Pereira
