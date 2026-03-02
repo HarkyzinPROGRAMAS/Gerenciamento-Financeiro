@@ -117,11 +117,25 @@ a {
     padding: 2em;
 }
 
+.saldoDespesaContainter {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+}
+
 .saldoAtual {
-    font-size: clamp(2.2em, 2.5vw, 2.5em);
+    font-size: clamp(1em, 2.5vw, 2.5em);
 }
 
 .saldoAtual h3 {
+    font-size: 0.8em;
+}
+
+.despesaAtual {
+    font-size: clamp(1em, 2.5vw, 2.5em);
+}
+
+.despesaAtual h3 {
     font-size: 0.8em;
 }
 
@@ -290,4 +304,8 @@ a {
     cursor: pointer;
 }
 
-
+@media (max-width: 1400px) {
+    .saldo {
+        padding: 4.5em;
+    }
+}
