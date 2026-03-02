@@ -288,9 +288,57 @@ a {
   display: flex;
 }
 
+.containerRelatorios {
+  color: #fff;
+  flex-direction: column;
+  gap: 40px;
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+}
+
+.cardRelatorio {
+  color: #fff;
+  background-color: #203a43;
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  display: flex;
+}
+
+.cardRelatorio h2 {
+  text-align: center;
+}
+
+.chartsRelatorios {
+  align-self: center;
+  max-width: 600px;
+}
+
+.cardRelatorio ul {
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  display: flex;
+}
+
+.cardRelatorio li {
+  color: #000;
+  background-color: #fff;
+  border-radius: 15px;
+  justify-content: space-between;
+  padding: 15px;
+  display: flex;
+}
+
 @media (width <= 1400px) {
   .saldo {
     padding: 4.5em;
+  }
+
+  .chart {
+    width: 350px;
   }
 }
 /*# sourceMappingURL=Gerenciamento-Financeiro.4d663569.css.map */

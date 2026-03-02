@@ -304,8 +304,58 @@ a {
     cursor: pointer;
 }
 
+.containerRelatorios {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 40px;
+    margin: 50px auto;
+    color: white;
+}
+
+.cardRelatorio {
+    background-color: #203a43;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardRelatorio h2 {
+    text-align: center;
+}
+
+.chartsRelatorios {
+    max-width: 600px;
+    align-self: center;
+}
+
+.cardRelatorio ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardRelatorio li {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
 @media (max-width: 1400px) {
     .saldo {
         padding: 4.5em;
+    }
+
+    .chart {
+        width: 350px;
     }
 }
