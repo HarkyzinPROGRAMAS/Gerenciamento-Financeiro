@@ -207,7 +207,7 @@
       });
     }
   }
-})({"fV5tf":[function(require,module,exports,__globalThis) {
+})({"hfx01":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -715,6 +715,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"lhin5":[function(require,module,exports,__globalThis) {
 
-},{}]},["fV5tf","lhin5"], "lhin5", "parcelRequire30ab", {})
+},{}]},["hfx01","lhin5"], "lhin5", "parcelRequire30ab", {})
 
 //# sourceMappingURL=receitas.dc9a3a36.js.map
