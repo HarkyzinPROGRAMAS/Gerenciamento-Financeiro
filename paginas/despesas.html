@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles.css">
+    <title>Gerenciamento Financeiro</title>
+</head>
+<body>
+    <section class = "titulo">
+            <header class="header">
+                <h2>Gerenciamento <br>Financeiro</h2>
+
+                <div class ="botoesSUB">    
+                    <a href="/src/index.html">Início</a>
+                    <a href="/paginas/relatorio.html">Relatório</a>
+                    <a href="/paginas/receitas.html">Receitas</a>
+                    <a href="/paginas/despesas.html">Despesas</a>
+                </div>
+            </header>
+            <section class="containerDespesas">
+    <h3>Adicionar Despesas:</h3>
+
+    <form id="formularioDespesas">
+      <input 
+        type="text" 
+        placeholder="Descrição"
+        required
+      >
+
+      <input 
+        type="number" 
+        placeholder="Valor"
+        step="0.01"
+        required
+      >
+
+      <input 
+        type="date"
+        required
+      >
+        
+      <button type="submit">Adicionar</button>
+    </form>
+
+    
+  </section>
+
+  <section class="listaContainer">
+    <h3>Despesas:</h3>
+
+    <ul class="listaDespesas" id="listaDespesas">
+      
+    </ul>
+  </section>
+
+  <script src="/src/despesas.js"></script>
+        </section>
+</body>
+</html>
