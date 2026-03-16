@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+::selection {
+    background-color: #0353a4;
+    color: #cae9ff;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1.5em;
+    background-color: #3391b1;
+    width: 250px;
+    height: 100vh;
+    font-weight: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-catego-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.catego-icon-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.catego-icon-container {
+    padding: .7em;
+    border-radius: .5em;
+    transition: .2s ease-out;
+}
+
+.catego-icon-container:hover {
+    background-color: #2a7a94;
+}
+
+.visao-geral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6em 2em;
+    margin-left: 250px;
+}
+
+.visao-geral h1 {
+    font-size: 4em;
+}
+
+.visao-geral-container {
+    display: flex;
+    gap: 10em;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5em;
+    min-width: 900px;
+}
+
+.linha-vertical {
+    border: 2px solid;
+    border-radius: 2px;
+    height: 50px;
+    color: rgba(255,255,255,0.6);
+}
+
+.saldo-despesas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    background-color: #3391b1;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+.dinheiro-container {
+    padding: 1em 2em;
+}
+
+.dinheiro-container h2 {
+    font-size: 3em;
+}
+
+.graficos-container {
+    display: flex;
+    gap: 5em;
+    margin-bottom: 2em;
+}
+
+.grafico {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex: 1;
+    padding: 1.5em 2.5em;
+    border-radius: 5px;
+    background-color: #3391b1;
+}
+
+.transacoes-recentes-container {
+    padding: 1.5em 2.5em;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #3391b1;
+}
+
+.lista-transacoes {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1em;
+}
+
+.saldo-despesas-container,
+.transacoes-recentes-container,
+.graficos-container {
+    width: 100%;
+}
