@@ -49,5 +49,57 @@
             </ul>
         </div>
     </header>
+
+    <section class="visao-geral">
+        <div class="dashboard-container">
+            <h1>Transações</h1>
+
+            <ul class="lista-transacoes-container">
+                <h2>Últimas Transações</h2>
+                <li>[exemplo]</li>
+                <li>[exemplo 2]</li>
+                <li>[exemplo 3]</li>
+            </ul>
+
+            <div class="transacao-add-container">
+
+                <div class="transacao-opcao-container">
+                    <div class="transacao-catego-container">
+                        <label for="tipo">Tipo:</label>
+                        <select name="tipo" id="tipo-transacao">
+                            <option value="receita">Receita</option>
+                            <option value="despesa">Despesa</option>
+                        </select>
+                    </div>
+
+                    <div class="transacao-catego-container">
+                        <label for="valor">Valor:</label>
+                        <input type="number" name="valor" id="valor-transacao" min="0">
+                    </div>
+
+                    <div class="transacao-catego-container">
+                        <label for="data">Data:</label>
+                        <input type="date" name="data" id="data-transacao">
+                    </div>
+
+                    <div class="transacao-catego-container">
+                        <label for="categoria">Categoria:</label>
+                        <select name="categoria" id="categoria-transacao">
+                            <option value="alimentacao">Alimentação</option>
+                            <option value="transporte">Transporte</option>
+                            <option value="moradia">Moradia</option>
+                            <option value="saude">Saúde</option>
+                            <option value="lazer">Lazer</option>
+                            <option value="educacao">Educação</option>
+                            <option value="salario">Salário</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button">Adicionar</button>
+
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>

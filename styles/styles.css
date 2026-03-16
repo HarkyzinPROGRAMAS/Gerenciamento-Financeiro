@@ -69,7 +69,7 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 6em 2em;
+    padding: 4em 2em;
     margin-left: 250px;
 }
 
@@ -149,4 +149,60 @@ a {
 .transacoes-recentes-container,
 .graficos-container {
     width: 100%;
+}
+
+.lista-transacoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 5px;
+    width: 100%;
+    padding: 1.5em 2.5em;
+    background-color: #3391b1;
+}
+
+.lista-transacoes-container li {
+    text-align: left;
+}
+
+.transacao-add-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #3391b1;
+    border-radius: 5px;
+    padding: 1.5em 2.5em;
+}
+
+.transacao-add-container button {
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: .4em;
+    cursor: pointer;
+}
+
+.transacao-add-container button:active {
+    background-color: rgb(230, 230, 230);
+}
+
+.transacao-opcao-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.transacao-catego-container {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.transacao-catego-container select, input {
+    border-radius: 5px;
+    border-color: white;
+    padding: .3em;
 }
