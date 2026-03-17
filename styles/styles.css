@@ -86,7 +86,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 1.5em;
+    gap: 2em;
     min-width: 900px;
 }
 
@@ -179,7 +179,7 @@ a {
     margin: 0 auto;
     background-color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: .4em;
     cursor: pointer;
 }
@@ -205,4 +205,100 @@ a {
     border-radius: 5px;
     border-color: white;
     padding: .3em;
+    transition: .2s ease-out;
+}
+
+.transacao-catego-container select {
+    cursor: pointer;
+}
+
+.transacao-catego-container input[type=date] {
+    cursor: text;
+}
+
+.transacao-catego-container select:focus, input:focus {
+    border: solid 2px #0353a4;
+    outline: none;
+}
+
+.transacao-add-catego-container {
+    width: 400px;
+    border-radius: 5px;
+    padding: 1.5em 2.5em;
+    background-color: #3391b1;
+}
+
+.transacao-add-catego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.transacao-add-catego button {
+    width: 200px;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: .4em;
+    cursor: pointer;
+}
+
+.transacao-add-catego button:active {
+    background-color: rgb(230, 230, 230);
+}
+
+.transacao-add-catego input {
+    width: 300px;
+    padding: .3em;
+    transition: .2s ease-out;
+}
+
+.transacao-add-catego input:focus {
+    border: solid 2px #0353a4;
+    outline: none;
+}
+
+.relatorio-total-gasto-container {
+    min-width: 50%;
+    padding: 1.5em 2.5em;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #3391b1;
+}
+
+.relatorio-total-gasto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.relatorio-total-gasto h2 {
+    font-size: 3em;
+}
+
+.relatorio-maior-despesa-container {
+    padding: 1.5em 2.5em;
+    border-radius: 5px;
+    background-color: #3391b1;
+}
+
+.relatorio-maior-despesa {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.relatorio-maior-categoria-container {
+    padding: 1.5em 2.5em;
+    border-radius: 5px;
+    background-color: #3391b1;
+}
+
+.relatorio-maior-categoria {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
