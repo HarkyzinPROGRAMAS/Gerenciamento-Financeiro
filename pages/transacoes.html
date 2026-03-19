@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,14 @@
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 
     <!-- Icones -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
+
 <body>
     <header class="header">
         <h1>Bolso Fundo</h1>
@@ -63,11 +67,8 @@
         <div class="dashboard-container">
             <h1>Transações</h1>
 
-            <ul class="lista-transacoes-container">
+            <ul class="lista-transacoes-container" id="lista-transacoes">
                 <h2>Últimas Transações</h2>
-                <li>[exemplo]</li>
-                <li>[exemplo 2]</li>
-                <li>[exemplo 3]</li>
             </ul>
 
             <div class="transacao-add-container">
@@ -100,11 +101,10 @@
                             <option value="saude">Saúde</option>
                             <option value="lazer">Lazer</option>
                             <option value="educacao">Educação</option>
-                            <option value="salario">Salário</option>
                         </select>
                     </div>
                 </div>
-                <button type="button">Adicionar</button>
+                <button type="button" id="btn-adicionar">Adicionar</button>
             </div>
 
             <div class="transacao-add-catego-container">
@@ -117,5 +117,8 @@
 
         </div>
     </section>
+
+    <script src="/transacoes.js"></script>
 </body>
+
 </html>
