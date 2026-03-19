@@ -86,6 +86,20 @@ function renderizar() {
 
         esquerda.appendChild(tipoIcone);
 
+        // NOVA PARTE (categoria + data ao lado do ícone)
+        const info = document.createElement("div");
+        info.style.display = "flex";
+        info.style.flexDirection = "column";
+        info.style.fontSize = "0.9em";
+        info.style.opacity = "0.85";
+
+        const dataFormatada = new Date(t.data).toLocaleDateString("pt-BR");
+        const categoriaFormatada = formatarCategoria(t.categoria);
+
+        info.textContent = `${categoriaFormatada} • ${dataFormatada}`;
+
+        esquerda.appendChild(info);
+
         const direita = document.createElement("div");
         direita.style.display = "flex";
         direita.style.alignItems = "center";
@@ -116,17 +130,7 @@ function renderizar() {
         linha1.appendChild(esquerda);
         linha1.appendChild(direita);
 
-        const linha2 = document.createElement("div");
-        linha2.style.fontSize = "0.9em";
-        linha2.style.opacity = "0.85";
-
-        const dataFormatada = new Date(t.data).toLocaleDateString("pt-BR");
-        const categoriaFormatada = formatarCategoria(t.categoria);
-
-        linha2.textContent = `${categoriaFormatada} • ${dataFormatada}`;
-
         li.appendChild(linha1);
-        li.appendChild(linha2);
 
         lista.appendChild(li);
     });

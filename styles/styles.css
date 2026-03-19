@@ -197,6 +197,7 @@ a {
 
 .transacao-catego-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: .5em;
 }
@@ -300,5 +301,73 @@ a {
 .relatorio-maior-categoria {
     display: flex;
     flex-direction: column;
+    gap: 1em;
+}
+
+.definir-orcamento-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em 2.5em;
+    border-radius: 5px;
+    background-color: #3391b1;
+}
+
+.definir-orcamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.definir-orcamento-opcao select, input {
+    border-radius: 5px;
+    border-color: white;
+    padding: .3em;
+    transition: .2s ease-out;
+}
+
+.definir-orcamento-opcao {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.definir-orcamento-opcao select {
+    cursor: pointer;
+}
+
+.definir-orcamento-opcao select:focus, input:focus {
+    border: solid 2px #0353a4;
+    outline: none;
+}
+
+.definir-orcamento-container button {
+    width: 200px;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: .4em;
+    cursor: pointer;
+}
+
+.definir-orcamento-container button:active {
+    background-color: rgb(230, 230, 230);
+}
+
+.acompanhamento-orcamento-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1.5em 2.5em;
+    border-radius: 5px;
+    background-color: #3391b1;
+}
+
+.acompanhamento-orcamento {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     gap: 1em;
 }

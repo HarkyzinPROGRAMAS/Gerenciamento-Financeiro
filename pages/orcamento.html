@@ -62,6 +62,46 @@
     <section class="visao-geral">
         <div class="dashboard-container">
             <h1>Orçamento</h1>
+
+            <div class="definir-orcamento-container">
+                <h2>Definir Orçamento</h2>
+
+                <div class="definir-orcamento">
+
+                    <div class="definir-orcamento-opcao">
+                        <label for="categoria">Categoria:</label>
+                        <select name="categoria" id="categoria-orcamento">
+                            <option value="alimentacao">Alimentação</option>
+                            <option value="transporte">Transporte</option>
+                            <option value="moradia">Moradia</option>
+                            <option value="saude">Saúde</option>
+                            <option value="lazer">Lazer</option>
+                            <option value="educacao">Educação</option>
+                        </select>
+                    </div>
+
+                    <div class="definir-orcamento-opcao">
+                        <label for="valor">Limite:</label>
+                        <input type="number" name="valor" id="valor-orcamento" min="0" placeholder="Valor (R$)">
+                    </div>
+
+                </div>
+
+                <button>Salvar</button>
+            </div>
+
+            <div class="acompanhamento-orcamento-container">
+                <h2>Acompanhamento</h2>
+
+                <ul class="acompanhamento-orcamento">
+                    <li>[Exemplo - R$1000000.00/R$2500000.00]</li>
+                    -barra de progresso insana-
+                    <li>[Exemplo 2 - R$15.00/R$250.00]</li>
+                    -barra de progresso insana-
+                </ul>
+
+            </div>
+
         </div>
     </section>
 </body>
