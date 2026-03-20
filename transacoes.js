@@ -4,14 +4,19 @@ const valorInput = document.getElementById("valor-transacao");
 const dataInput = document.getElementById("data-transacao");
 const categoriaInput = document.getElementById("categoria-transacao");
 
+const inputCategoria = document.getElementById("transacao-catego-add");
+const btnAddCategoria = document.querySelector(".transacao-add-catego button:nth-child(2)");
+const btnRemoveCategoria = document.querySelector(".transacao-add-catego button:nth-child(3)");
+
 let financas = {
     receitas: [],
     despesas: []
 };
 
+let categorias = [];
+
 function carregarFinancas() {
     const dados = localStorage.getItem("financas");
-
     if (dados) {
         financas = JSON.parse(dados);
     }
@@ -21,12 +26,45 @@ function salvarFinancas() {
     localStorage.setItem("financas", JSON.stringify(financas));
 }
 
+function carregarCategorias() {
+    const dados = localStorage.getItem("categorias");
+
+    if (dados) {
+        categorias = JSON.parse(dados);
+    } else {
+        categorias = [
+            "alimentacao",
+            "transporte",
+            "moradia",
+            "saude",
+            "lazer",
+            "educacao"
+        ];
+        salvarCategorias();
+    }
+}
+
+function salvarCategorias() {
+    localStorage.setItem("categorias", JSON.stringify(categorias));
+}
+
+function atualizarSelectCategorias() {
+    categoriaInput.innerHTML = "";
+
+    categorias.forEach(cat => {
+        const option = document.createElement("option");
+        option.value = cat;
+        option.textContent = formatarCategoria(cat);
+        categoriaInput.appendChild(option);
+    });
+}
+
 function adicionarTransacao(valor, tipo, data, categoria) {
     const nova = {
         valor: Number(valor),
         data: data,
         categoria: categoria,
-        criadaEm: new Date()
+        criadaEm: Date.now()
     };
 
     if (tipo === "receita") {
@@ -43,6 +81,99 @@ function obterTodasTransacoes() {
         ...financas.receitas.map(t => ({ ...t, tipo: "receita" })),
         ...financas.despesas.map(t => ({ ...t, tipo: "despesa" }))
     ];
+}
+
+function removerTransacao(id, tipo) {
+    if (tipo === "receita") {
+        financas.receitas = financas.receitas.filter(t => t.criadaEm !== id);
+    } else {
+        financas.despesas = financas.despesas.filter(t => t.criadaEm !== id);
+    }
+
+    salvarFinancas();
+    renderizar();
+}
+
+btnAddCategoria.onclick = () => {
+    const nova = inputCategoria.value.trim().toLowerCase();
+
+    if (!nova) return;
+
+    if (categorias.includes(nova)) {
+        alert("Categoria já existe!");
+        return;
+    }
+
+    categorias.push(nova);
+    salvarCategorias();
+    atualizarSelectCategorias();
+
+    inputCategoria.value = "";
+};
+
+btnRemoveCategoria.onclick = () => {
+    const cat = inputCategoria.value.trim().toLowerCase();
+
+    if (!categorias.includes(cat)) {
+        alert("Categoria não existe!");
+        return;
+    }
+
+    categorias = categorias.filter(c => c !== cat);
+
+    financas.receitas.forEach(t => {
+        if (t.categoria === cat) t.categoria = "outros";
+    });
+
+    financas.despesas.forEach(t => {
+        if (t.categoria === cat) t.categoria = "outros";
+    });
+
+    if (!categorias.includes("outros")) {
+        categorias.push("outros");
+    }
+
+    salvarCategorias();
+    salvarFinancas();
+    atualizarSelectCategorias();
+    renderizar();
+
+    inputCategoria.value = "";
+};
+
+function editarCategoria(antiga, nova) {
+    const index = categorias.indexOf(antiga);
+
+    if (index !== -1) {
+        categorias[index] = nova;
+
+        financas.receitas.forEach(t => {
+            if (t.categoria === antiga) t.categoria = nova;
+        });
+
+        financas.despesas.forEach(t => {
+            if (t.categoria === antiga) t.categoria = nova;
+        });
+
+        salvarCategorias();
+        salvarFinancas();
+        atualizarSelectCategorias();
+        renderizar();
+    }
+}
+
+function formatarCategoria(cat) {
+    const mapa = {
+        alimentacao: "Alimentação",
+        transporte: "Transporte",
+        moradia: "Moradia",
+        saude: "Saúde",
+        lazer: "Lazer",
+        educacao: "Educação",
+        outros: "Outros"
+    };
+
+    return mapa[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
 }
 
 function renderizar() {
@@ -86,7 +217,6 @@ function renderizar() {
 
         esquerda.appendChild(tipoIcone);
 
-        // NOVA PARTE (categoria + data ao lado do ícone)
         const info = document.createElement("div");
         info.style.display = "flex";
         info.style.flexDirection = "column";
@@ -117,10 +247,6 @@ function renderizar() {
         btnRemover.style.cursor = "pointer";
         btnRemover.style.color = "white";
         btnRemover.style.fontSize = "0.8em";
-        btnRemover.style.transition = "0.2s";
-
-        btnRemover.onmouseover = () => btnRemover.style.backgroundColor = "#cc0000";
-        btnRemover.onmouseout = () => btnRemover.style.backgroundColor = "#ff4d4d";
 
         btnRemover.onclick = () => removerTransacao(t.criadaEm, t.tipo);
 
@@ -131,7 +257,6 @@ function renderizar() {
         linha1.appendChild(direita);
 
         li.appendChild(linha1);
-
         lista.appendChild(li);
     });
 }
@@ -154,31 +279,9 @@ btnAdicionar.addEventListener("click", () => {
     dataInput.value = "";
 });
 
-function removerTransacao(id, tipo) {
-    if (tipo === "receita") {
-        financas.receitas = financas.receitas.filter(t => t.criadaEm !== id);
-    } else {
-        financas.despesas = financas.despesas.filter(t => t.criadaEm !== id);
-    }
-
-    salvarFinancas();
-    renderizar();
-}
-
-function formatarCategoria(cat) {
-    const mapa = {
-        alimentacao: "Alimentação",
-        transporte: "Transporte",
-        moradia: "Moradia",
-        saude: "Saúde",
-        lazer: "Lazer",
-        educacao: "Educação"
-    };
-
-    return mapa[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
-}
-
 window.onload = function () {
     carregarFinancas();
+    carregarCategorias();
+    atualizarSelectCategorias();
     renderizar();
 };

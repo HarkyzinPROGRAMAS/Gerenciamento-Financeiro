@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,14 @@
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 
     <!-- Icones -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
+
 <body>
     <header class="header">
         <h1>Bolso Fundo</h1>
@@ -66,12 +70,12 @@
             <div class="relatorio-total-gasto-container">
                 <div class="relatorio-total-gasto">
                     Total Gasto:
-                    <h2>R$0,00</h2>
+                    <h2 id="total-gasto">R$0,00</h2>
                 </div>
             </div>
 
             <div class="relatorio-maior-despesa-container">
-                <ul class="relatorio-maior-despesa">
+                <ul class="relatorio-maior-despesa" id="maior-despesa">
                     <h2>Maior Despesa</h2>
 
                     <li>[exemplo]</li>
@@ -79,13 +83,15 @@
             </div>
 
             <div class="relatorio-maior-categoria-container">
-                <ul class="relatorio-maior-categoria">
-                    <h2>Maior Gasto em uma Categoria</h2>
+                <ul class="relatorio-maior-categoria" id="maior-categoria">
+                    <h2>Categoria que Mais Consumiu Orçamento</h2>
 
                     <li>[exemplo]</li>
                 </ul>
             </div>
         </div>
     </section>
+    <script src="/relatorio.js"></script>
 </body>
+
 </html>
