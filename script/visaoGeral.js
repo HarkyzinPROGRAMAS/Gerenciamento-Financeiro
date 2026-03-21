@@ -28,24 +28,41 @@ function criarGrafico(id, labels, data, cores) {
         },
         options: {
             plugins: {
-                legend: { labels: { color: "white" } }
+                legend: { labels: { color: "black" } }
             }
         }
     });
 }
 
 function graficoDespesas() {
+    const hoje = new Date();
     const mapa = {};
 
-    financas.despesas.forEach(t => {
-        mapa[t.categoria] = (mapa[t.categoria] || 0) + t.valor;
-    });
+    financas.despesas
+        .filter(t => {
+            const d = new Date(t.data);
+            return d.getMonth() === hoje.getMonth() &&
+                    d.getFullYear() === hoje.getFullYear();
+        })
+        .forEach(t => {
+            mapa[t.categoria] = (mapa[t.categoria] || 0) + t.valor;
+        });
+
+    let labels = Object.keys(mapa);
+    let data = Object.values(mapa);
+
+    if (data.length === 0) {
+        labels = ["Sem dados"];
+        data = [1];
+    }
 
     criarGrafico(
         "grafico-despesas",
-        Object.keys(mapa),
-        Object.values(mapa),
-        ["#ff4d4d", "#ff944d", "#ffd11a", "#66ff66", "#66ccff", "#cc99ff"]
+        labels,
+        data,
+        data.length === 1 && labels[0] === "Sem dados"
+            ? ["#444"]
+            : ["#ff4d4d", "#ff944d", "#ffd11a", "#66ff66", "#66ccff", "#cc99ff"]
     );
 }
 
@@ -106,15 +123,15 @@ function graficoComparativo() {
         options: {
             plugins: {
                 legend: {
-                    labels: { color: "white" }
+                    labels: { color: "black" }
                 }
             },
             scales: {
                 x: {
-                    ticks: { color: "white" }
+                    ticks: { color: "black" }
                 },
                 y: {
-                    ticks: { color: "white" }
+                    ticks: { color: "black" }
                 }
             }
         }
@@ -175,8 +192,9 @@ const formatarCategoria = cat => ({
     educacao: "Educação"
 }[cat] || cat);
 
-window.onload = () => {
-    const resumo = atualizarUI();
+window.addEventListener("load", () => {
+    atualizarUI();
     graficoDespesas();
     graficoComparativo();
-};
+    renderizarRecentes();
+});
