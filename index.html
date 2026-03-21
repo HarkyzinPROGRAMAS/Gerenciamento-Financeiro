@@ -96,13 +96,13 @@
 
                 <div class="grafico">
                     <h2>Despesas do Mês atual</h2>
-                    [colocar gráfico de donut aqui]
+                    <canvas id="grafico-despesas"></canvas>
                 </div>
 
                 <div class="grafico">
                     <div id="chart-container">
                         <h2>Receitas X Despesas</h2>
-                        [colocar gráfico de donut aqui]
+                        <canvas id="grafico-comparativo"></canvas>
                         <br>Últimos 6 meses
                     </div>
                 </div>
@@ -114,15 +114,14 @@
                 <h2>Transações Recentes</h2>
                 <br>
 
-                <ul class="lista-transacoes">
-                    <li>[Exemplo]</li>
-                    <li>[Exemplo 2]</li>
+                <ul class="lista-transacoes" id="lista-recentes"></ul>
                 </ul>
 
             </div>
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/script/visaoGeral.js"></script>
 </body>
 

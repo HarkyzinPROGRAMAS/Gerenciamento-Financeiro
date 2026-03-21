@@ -94,7 +94,7 @@ a {
     border: 2px solid;
     border-radius: 2px;
     height: 50px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .saldo-despesas-container {
@@ -129,6 +129,18 @@ a {
     padding: 1.5em 2.5em;
     border-radius: 5px;
     background-color: #3391b1;
+}
+
+#grafico-comparativo {
+    max-height: 250px;
+}
+
+#chart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .transacoes-recentes-container {
@@ -202,7 +214,8 @@ a {
     gap: .5em;
 }
 
-.transacao-catego-container select, input {
+.transacao-catego-container select,
+input {
     border-radius: 5px;
     border-color: white;
     padding: .3em;
@@ -217,7 +230,8 @@ a {
     cursor: text;
 }
 
-.transacao-catego-container select:focus, input:focus {
+.transacao-catego-container select:focus,
+input:focus {
     border: solid 2px #0353a4;
     outline: none;
 }
@@ -320,7 +334,8 @@ a {
     gap: 2em;
 }
 
-.definir-orcamento-opcao select, input {
+.definir-orcamento-opcao select,
+input {
     border-radius: 5px;
     border-color: white;
     padding: .3em;
@@ -337,7 +352,8 @@ a {
     cursor: pointer;
 }
 
-.definir-orcamento-opcao select:focus, input:focus {
+.definir-orcamento-opcao select:focus,
+input:focus {
     border: solid 2px #0353a4;
     outline: none;
 }
